@@ -56,6 +56,6 @@ From...............| To....................| Description
 
 ## OCDS Design of a Framework Agreement by CPB
 
-![OCDS Design of a Framework Agreement](https://www.lucidchart.com/publicSegments/view/8b99569a-a46e-40f6-bde8-bd176774602d/image.png)
+![OCDS Design of a Framework Agreement](https://www.lucidchart.com/publicSegments/view/326948f5-dab7-456a-9dce-502d694b3155/image.png)
 *You can also leave your comments on it [here](https://www.lucidchart.com/invitations/accept/d9317dbf-431d-4941-9208-2a3f89215754)*
 
