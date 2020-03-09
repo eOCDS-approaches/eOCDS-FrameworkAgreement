@@ -54,8 +54,43 @@ From...............| To....................| Description
 `PaC-1-1` | `MC-2-1-1-1` | Mini-competition between those `Selected Suppliers` who responded with their `PCR` to `CPBs` `PCR` initiated by `Buyer 2` under this `CP` in order to cover parent `EI` or its part
 `MC-2-1-1-1` | `PC-2-1-1-1` | Purchase Contract is concluded between `Buyer 2` and the Supplier Selected under this `MC` 
 
-## OCDS Design of a Framework Agreement by CPB
+## eOCDS Design of a Framework Agreement by CPB
 
 ![OCDS Design of a Framework Agreement](https://www.lucidchart.com/publicSegments/view/326948f5-dab7-456a-9dce-502d694b3155/image.png)
 *You can also leave your comments on it [here](https://www.lucidchart.com/invitations/accept/d9317dbf-431d-4941-9208-2a3f89215754)*
 
+### OCDS parallel records used to organize eOCDS design for FAs
+
+#### EI-2 
+`Expenditure Item` is a stream describing a group of goods, services or works that CA plans to procure over a certain period, as well as the amount available for CA (as a sum of all the `Funding Sources` identified for this `EI` as child elements) to cover the purchases of subject of this group during the specified period. 
+
+Attribute |  Description | Covered by
+:------- | :-------- | :------
+
+##### FS-2-1 
+`Funding Source` is a stream describing a specific source of funding for procurement of goods, services or works from a parent `Expenditure Item`. It contains information on both amount and Organization providing the fund, as well as other Organizations involved in the disposal of this particular budget: payer, donor. In addition, withing this stream it is possible to reflect a current status of described fund, which makes it possible to understand whether the given budget is approved by the providing party (treasury or donor) and to what extent. The valence of the model allows to organize the relationships of the entities described on its basis with other model entities (such as tenders and contracts). Thus, there is an opportunity to display the use of this source of fundings in announced tenders or concluded contracts.
+
+Attribute |  Description | Covered by
+:------- | :-------- | :------
+`ocid` | Specific need is identified (aggregated and weighted) and described | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/identifiers/)
+`planning.budget.period` | The period covered by this budget entry |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
+`planning.budget.amount` | The value of the budget line item |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
+`planning.budget.sourceParty` | The organization related to this budget entry |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
+`relatedProcesses` | The link to an Expenditure Item this FS is related to | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
+
+#### CP-2-1-1 
+`Contracting Process` is a stream describing a specific general initiation started by CA in order to satisfy related `EI` or its part. In a common case such an initiation embraces: periodic (indicative) notice, contract notice, tendering part(s), awarding and contracting. But in case of aggregated procurement through FA - on a first stage `CP` will only include:
+- general definition of a subject to be procured (as a general substance of the stream) 
+- overall budget of this `CP`
+- related `EI` (as a related stream), 
+- related `FSs` (as a related stream(s)), 
+- planned quantity and allocated budget (as a separate stream - `PN`)
+
+Attribute |  Description | Covered by
+:------- | :-------- | :------
+
+##### PN-2-1-1-1
+`Periodic notice` - is a stream announcing an intention to conduct a tender. On this stage just hi-level params of future procedure to be indicated including estimated period of start (month or quarter), indicative specification of a subject of procurement and its quantity.
+
+Attribute |  Description | Covered by
+:------- | :-------- | :------
