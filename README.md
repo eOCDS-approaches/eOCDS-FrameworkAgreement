@@ -4,33 +4,33 @@
 ![Basic logic concept of a Framework Agreement by CPB](https://www.lucidchart.com/publicSegments/view/b09729c6-cc4d-44ce-be4d-2afbe2e96195/image.png)
 *You can also leave your comments on it [here](https://www.lucidchart.com/invitations/accept/0d4b149a-68dd-4bcb-a0f7-a16cf07308ca)*
 #### Legend
-Data block | Description
-:------------ | :-------------
-Exepnditure Item (EI) | 
-Funding Source (FS) | 
-Contracting Process (CP) |
-Periodic Notice |
-Prior Information Notice |
-Framework Agreement Establishment | 
-Aggregated Budget | 
-Aggregated Forecast |
-Prequalification |
-Prequalification Criteria (PQC) | 
-Expression of Interest (EoI) | 
-Selected Candidates | 
-Pre-award Catalogue Request |
-Pre-award Catalogue |
-Mini-competition |
-Purchase Order |
-Purchase Contract |
+Data block | Acronym | Description
+:------------ | :------------- |:-------------
+Exependiture Item |EI |
+Funding Source |FS |
+Contracting Process |CP |
+Periodic Notice |PN |
+Prior Information Notice |PIN |
+Framework Agreement Establishment |FAE  |
+Aggregated Budget | AB |
+Aggregated Forecast |AF |
+Prequalification |PQ |
+Prequalification Criteria | PQC | 
+Expression of Interest |EoI |
+Selected Suppliers |SS  |
+Pre-award Catalogue Request |PCR |
+Pre-award Catalogue |PaC |
+Mini-competition |MC |
+Purchase Order |PO |
+Purchase Contract |PC |
 
 #### Actors
-Actor | Description
-:------------ | :-------------
+Actor | Acronym | Description
+:------------ | :------------- | :-------------
 Buyer | 
-Central Purchasing Body (CPB) | 
-Economic Operator (EO) |
-Selected Supplier (SS) |
+Central Purchasing Body | CPB |  
+Economic Operator | EO |
+Selected Supplier | SS |
 
 #### Data flow
 *On example of Buyer's 2 fork:*
