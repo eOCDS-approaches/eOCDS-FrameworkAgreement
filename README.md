@@ -100,36 +100,68 @@ Attribute |  Description | Covered by
 `ocid` | Global unique identifier for this Contracting Process | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/identifiers/)
 `planning.budget.amount` | The overal value of the funds allocated for this contacting process |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
 `planning.budget.budgetBreakdown` | Detailed budget breakdown under this contracting process, covering multiple budget funding and multiple periods |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
-`tender.title` | | 
-`tender.description` | |
-`tender.value` | |
+`tender.title` | A overall title for this contracting process | [OCDS 1.1.](https://standard.open-contracting.org/latest/en/schema/reference/#release)
+`tender.description` | An overall description for this contracting process | [OCDS 1.1.](https://standard.open-contracting.org/latest/en/schema/reference/#release)
+`tender.value` | The total upper estimated value of the contracting process | [OCDS 1.1.](https://standard.open-contracting.org/latest/en/schema/reference/#release)
 `tender.mainProcurementCategory` | Category of the subject of this contracting process | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/codelists/#procurement-category)
 `tender.classification` | CPV classification of the subject of this contracting process | Not covered
 `buyer` | Organization in whose interests the need is declared | [OCDS 1.1.](https://standard.open-contracting.org/latest/en/schema/reference/#release)
 `tender.contractPeriod` | The period over which the contract is estimated or required to be active | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/#tender)
 `relatedProcesses` | |
-`*.relationship: x_fundingSource` | Link to related FS(s) | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
-`*.relationship: x_expenditure` | Link to related EI(s) | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
-`*.relationship: planning` | Link to related PN | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
-`*.relationship: x_framework` | Where subject is included in FA - link to related FA | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
+_`*.relationship: x_fundingSource`_ | Link to related FS(s) | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
+_`*.relationship: x_expenditure`_ | Link to related EI(s) | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
+_`*.relationship: planning`_ | Link to related PN | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
+_`*.relationship: x_framework`_ | Where subject is included in FA - link to related FA | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
 
 ##### PN-2-1-1-1
 `Periodic notice` - is a stream announcing an intention to conduct a tender. On this stage just hi-level params of future procedure to be indicated including estimated period of start (month or quarter), indicative specification of a subject of procurement and its quantity.
 
 Attribute |  Description | Covered by
 :------- | :-------- | :------
+`ocid` | Global unique identifier for the PN under this Contracting Process | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/#release)
+`tender.tenderPeriod` | | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/#tender)
+`tender.contractPeriod` | | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/#tender)
+`tender.lots` | | [core_extension](https://github.com/open-contracting-extensions/ocds_lots_extension)
+`tender.items` | | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/#tender)
+`relatedProcesses` | Link to the parent contracting process | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
 
 ##### MC-2-1-1-1
 `Mini Competition`
 
 Attribute |  Description | Covered by
 :------- | :-------- | :------
+`ocid` | Global unique identifier for the MC under this Contracting Process | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/#release)
+`tender.tenderPeriod` | | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/#tender)
+`tender.lots` | | [core_extension](https://github.com/open-contracting-extensions/ocds_lots_extension)
+`tender.items` | | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/#tender)
+`tender.criteria` | | [core_extension](https://github.com/open-contracting-extensions/ocds_requirements_extension)
+`tender.targets` | | [core_extension](https://github.com/open-contracting-extensions/ocds_metrics_extension)
+`bids` | | [core_extension](https://github.com/open-contracting-extensions/ocds_bid_extension)
+`awards` | | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/#tender)
+`contracts.supplier` | | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/#tender)
+`contract.AwardID` | | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/#tender)
+`contracts.relatedProcesses` | | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/#tender)
+`relatedProcesses` | | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
+_`*.relationshi: parent`_ | | 
+_`*.relationshi: planning`_ | |
+_`*.relationshi: x_framework`_ | |
+_`*.relationshi: x_preAwardCatalogue`_ | |
+
 
 ##### PC-2-1-1-1
 `Purchase Contract`
 
 Attribute |  Description | Covered by
 :------- | :-------- | :------
+`ocid` | | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/#release)
+`contracts.contractPeriod` | | [OCDS.1.1](https://standard.open-contracting.org/latest/en/schema/reference/#contract)
+`contracts.supplier` | | [OCDS.1.1](https://standard.open-contracting.org/latest/en/schema/reference/#contract)
+`contracts.value` | | [OCDS.1.1](https://standard.open-contracting.org/latest/en/schema/reference/#contract)
+`contracts.agreedMetrics` | | [core_extension](https://github.com/open-contracting-extensions/ocds_metrics_extension)
+`contracts.items` | | [OCDS.1.1](https://standard.open-contracting.org/latest/en/schema/reference/#contract)
+`contracts.milestones` | | [OCDS.1.1](https://standard.open-contracting.org/latest/en/schema/reference/#contract)
+`contracts.implementation` | | [OCDS.1.1](https://standard.open-contracting.org/latest/en/schema/reference/#contract)
+`relatedProcesses` | | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess)
 
 #### FA-1
 `Framework Agreement`
