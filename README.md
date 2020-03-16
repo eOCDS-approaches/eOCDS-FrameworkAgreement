@@ -59,7 +59,7 @@ From...............| To....................| Description
 ![OCDS Design of a Framework Agreement](https://www.lucidchart.com/publicSegments/view/cf36724f-6828-469c-beda-c0a1c66f6f83/image.png)
 *You can also leave your comments on it [here](https://www.lucidchart.com/invitations/accept/d9317dbf-431d-4941-9208-2a3f89215754)*
 
-### OCDS parallel records used to organize eOCDS design for FAs
+### OCDS parallel records used to reflect eOCDS design for FAs
 
 #### EI-2 
 `Expenditure Item` is a stream describing a group of goods, services or works that CA plans to procure over a certain period, as well as the amount available for CA (as a sum of all the `Funding Sources` identified for this `EI` as child elements) to cover the purchases of subject of this group during the specified period. 
@@ -68,11 +68,11 @@ Attribute |  Description | Covered by
 :------- | :-------- | :------
 `ocid` | Global unique identifier for this expenditure item | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/identifiers/)
 `tender.mainProcurementCategory` | Category of the subject of this expenditure item | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/codelists/#procurement-category)
-`tender.classification` | CPV classification of the subject of this expenditure item | Not covered)
+`tender.classification` | CPV classification of the subject of this expenditure item | Not covered
 `buyer` | Organization in whose interests the need is declared | [OCDS 1.1.](https://standard.open-contracting.org/latest/en/schema/reference/#release)
 `planning.budget.period` | The aggregated period of availability of funding sources under this expenditure item |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
 `planning.budget.amount` | The absolute total value of all the funding sources under this expenditure item |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
-
+`relatedProcesses` | The link to the funding sources allocated for this exepnditure item | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
 
 ##### FS-2-1 
 `Funding Source` is a stream describing a specific source of funding for procurement of goods, services or works from a parent `Expenditure Item`. It contains information on both amount and Organization providing the fund, as well as other Organizations involved in the disposal of this particular budget: payer, donor. In addition, withing this stream it is possible to reflect a current status of described fund, which makes it possible to understand whether the given budget is approved by the providing party (treasury or donor) and to what extent. The valence of the model allows to organize the relationships of the entities described on its basis with other model entities (such as tenders and contracts). Thus, there is an opportunity to display the use of this source of fundings in announced tenders or concluded contracts.
@@ -97,9 +97,54 @@ Attribute |  Description | Covered by
 
 Attribute |  Description | Covered by
 :------- | :-------- | :------
+`ocid` | Global unique identifier for this Contracting Process | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/identifiers/)
+`planning.budget.amount` | The overal value of the funds allocated for this contacting process |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
+`planning.budget.budgetBreakdown` | Detailed budget breakdown under this contracting process, covering multiple budget funding and multiple periods |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
+`tender.title` | | 
+`tender.description` | |
+`tender.value` | |
+`tender.mainProcurementCategory` | Category of the subject of this contracting process | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/codelists/#procurement-category)
+`tender.classification` | CPV classification of the subject of this contracting process | Not covered
+`buyer` | Organization in whose interests the need is declared | [OCDS 1.1.](https://standard.open-contracting.org/latest/en/schema/reference/#release)
+`tender.contractPeriod` | The period over which the contract is estimated or required to be active | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/#tender)
+`relatedProcesses` | |
+`*.relationship: x_fundingSource` | Link to related FS(s) | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
+`*.relationship: x_expenditure` | Link to related EI(s) | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
+`*.relationship: planning` | Link to related PN | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
+`*.relationship: x_framework` | Where subject is included in FA - link to related FA | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
 
 ##### PN-2-1-1-1
 `Periodic notice` - is a stream announcing an intention to conduct a tender. On this stage just hi-level params of future procedure to be indicated including estimated period of start (month or quarter), indicative specification of a subject of procurement and its quantity.
+
+Attribute |  Description | Covered by
+:------- | :-------- | :------
+
+##### MC-2-1-1-1
+`Mini Competition`
+
+Attribute |  Description | Covered by
+:------- | :-------- | :------
+
+##### PC-2-1-1-1
+`Purchase Contract`
+
+Attribute |  Description | Covered by
+:------- | :-------- | :------
+
+#### FA-1
+`Framework Agreement`
+
+Attribute |  Description | Covered by
+:------- | :-------- | :------
+
+##### PQ-1
+`Pre-Qualification`
+
+Attribute |  Description | Covered by
+:------- | :-------- | :------
+
+##### PaC-1-1
+`Pre-Award Catalogue`
 
 Attribute |  Description | Covered by
 :------- | :-------- | :------
