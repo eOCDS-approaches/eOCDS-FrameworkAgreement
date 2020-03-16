@@ -66,16 +66,25 @@ From...............| To....................| Description
 
 Attribute |  Description | Covered by
 :------- | :-------- | :------
+`ocid` | Global unique identifier for this expenditure item | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/identifiers/)
+`tender.mainProcurementCategory` | Category of the subject of this expenditure item | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/codelists/#procurement-category)
+`tender.classification` | CPV classification of the subject of this expenditure item | Not covered)
+`buyer` | Organization in whose interests the need is declared | [OCDS 1.1.](https://standard.open-contracting.org/latest/en/schema/reference/#release)
+`planning.budget.period` | The aggregated period of availability of funding sources under this expenditure item |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
+`planning.budget.amount` | The absolute total value of all the funding sources under this expenditure item |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
+
 
 ##### FS-2-1 
 `Funding Source` is a stream describing a specific source of funding for procurement of goods, services or works from a parent `Expenditure Item`. It contains information on both amount and Organization providing the fund, as well as other Organizations involved in the disposal of this particular budget: payer, donor. In addition, withing this stream it is possible to reflect a current status of described fund, which makes it possible to understand whether the given budget is approved by the providing party (treasury or donor) and to what extent. The valence of the model allows to organize the relationships of the entities described on its basis with other model entities (such as tenders and contracts). Thus, there is an opportunity to display the use of this source of fundings in announced tenders or concluded contracts.
 
 Attribute |  Description | Covered by
 :------- | :-------- | :------
-`ocid` | Specific need is identified (aggregated and weighted) and described | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/identifiers/)
-`planning.budget.period` | The period covered by this budget entry |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
-`planning.budget.amount` | The value of the budget line item |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
-`planning.budget.sourceParty` | The organization related to this budget entry |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
+`ocid` | Global unique identifier for this funding source | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/identifiers/)
+`planning.budget.period` | The period of availability of this funding source |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
+`planning.budget.amount` | The absolute value of this funding source |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
+`planning.budget.amountRequested` | Future steps of representing the workflow of budget approvals | [Issue #616](https://github.com/open-contracting/standard/issues/616)
+`planning.budget.status` | Future steps of representing the workflow of budget approvals | [Issue #616](https://github.com/open-contracting/standard/issues/616)
+`planning.budget.sourceParty` | The organization related to this funding source |[core_extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension/blob/master/release-schema.json)
 `relatedProcesses` | The link to an Expenditure Item this FS is related to | [OCDS 1.1](https://standard.open-contracting.org/latest/en/schema/reference/?highlight=relatedProcess#relatedprocess) 
 
 #### CP-2-1-1 
