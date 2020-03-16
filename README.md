@@ -56,7 +56,7 @@ From...............| To....................| Description
 
 ## eOCDS Design of a Framework Agreement by CPB
 
-![OCDS Design of a Framework Agreement](https://www.lucidchart.com/publicSegments/view/cf36724f-6828-469c-beda-c0a1c66f6f83/image.png)
+![OCDS Design of a Framework Agreement](https://www.lucidchart.com/publicSegments/view/5c214c2e-a030-4783-bace-a9731cc29018/image.png)
 *You can also leave your comments on it [here](https://www.lucidchart.com/invitations/accept/d9317dbf-431d-4941-9208-2a3f89215754)*
 
 ### OCDS parallel records used to reflect eOCDS design for FAs
