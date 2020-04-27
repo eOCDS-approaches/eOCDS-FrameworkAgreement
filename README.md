@@ -54,6 +54,9 @@ From...............| To....................| Description
 `PaC-1-1` | `MC-2-1-1-1` | Mini-competition between those `Selected Suppliers` who responded with their `PCR` to `CPBs` `PCR` initiated by `Buyer 2` under this `CP` in order to cover parent `EI` or its part
 `MC-2-1-1-1` | `PC-2-1-1-1` | Purchase Contract is concluded between `Buyer 2` and the Supplier Selected under this `MC` 
 
+## BPMN of a Framework Agreement by CPB
+You can also leave your comments on it [here](https://cawemo.com/share/4936b1c7-4467-432d-aee6-1b2cc8b3be03)
+
 ## eOCDS Design of a Framework Agreement by CPB
 
 ![OCDS Design of a Framework Agreement](https://www.lucidchart.com/publicSegments/view/5c214c2e-a030-4783-bace-a9731cc29018/image.png)
